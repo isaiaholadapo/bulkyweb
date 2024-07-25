@@ -1,0 +1,37 @@
+@model Category
+
+@{
+    ViewBag.Title = "Delete Category";
+    Layout = "_Layout";
+}
+
+<form action="" method="post">
+    <div class="row pb-2">
+        <h2 class="text-primary">Delete Category</h2>
+        <hr>
+    </div>
+    @* <div asp-validation-summary="All" class="text-danger"></div> *@
+    <div class="mb-3 row">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" disabled id="catName" class="form-control">
+    </div>
+    <div class="mb-3 row">
+        <label asp-for="DisplayOrder">Display Order</label>
+        <input asp-for="DisplayOrder" disabled id="displayOrder" class="form-control">
+    </div>
+    <div class="row">
+        <div class="col-6 ">
+            <button type="submit" class="btn-danger btn form-control">Delete</button>
+        </div>
+        <div class="col-6 ">
+            <a asp-controller="Category" asp-action="Index" class="btn btn-outline-secondary form-control"> Back to List</a>
+        </div>
+    </div>
+</form>
+
+@section Scripts
+{
+    @{
+        <partial name="_ValidationScriptsPartial"/>
+    }
+}
