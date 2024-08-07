@@ -1,5 +1,5 @@
-using BulkyWeb.Data;
-using BulkyWeb.Models;
+using Bulky.DataAccess.Data;
+using Bulky.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BulkyWeb.Controllers;
@@ -23,14 +23,12 @@ public class CategoryController : Controller
     {
         return View();
     }
-    
+
     [HttpPost]
     public IActionResult Create(Category obj)
     {
         if (obj.Name == obj.DisplayOrder.ToString())
-        {
             ModelState.AddModelError("name", "DisplayOrder canot be the same with Category Name");
-        }
         if (ModelState.IsValid)
         {
             _db.Categories.Add(obj);
@@ -44,19 +42,13 @@ public class CategoryController : Controller
 
     public IActionResult Edit(int? id)
     {
-        if (id == null || id == 0)
-        {
-            return NotFound();
-        }
+        if (id == null || id == 0) return NotFound();
         // Search item using primary key
-        Category? categoryFromDb = _db.Categories.Find(id);
+        var categoryFromDb = _db.Categories.Find(id);
         // Search item using link operation and allows more params
         // Category? categoryFromDb1 = _db.Categories.FirstOrDefault(u => u.Id == id);
         // Category? categoryFromDb2 = _db.Categories.Where(u => u.Id == id).FirstOrDefault();
-        if (categoryFromDb == null)
-        {
-            return NotFound();
-        }
+        if (categoryFromDb == null) return NotFound();
         return View(categoryFromDb);
     }
 
@@ -70,33 +62,26 @@ public class CategoryController : Controller
             TempData["success"] = "Category updated successfully";
             return RedirectToAction("Index");
         }
+
         return View();
     }
 
     public IActionResult Delete(int? id)
     {
-        if (id == null || id == 0)
-        {
-            return NotFound();
-        }
+        if (id == null || id == 0) return NotFound();
 
-        Category? categoryFromDb = _db.Categories.Find(id);
+        var categoryFromDb = _db.Categories.Find(id);
 
-        if (categoryFromDb == null)
-        {
-            return NotFound();
-        }
+        if (categoryFromDb == null) return NotFound();
         return View(categoryFromDb);
     }
 
-    [HttpPost, ActionName("Delete")]
+    [HttpPost]
+    [ActionName("Delete")]
     public IActionResult DeletePost(int id)
     {
-        Category? obj = _db.Categories.Find(id);
-        if (obj == null)
-        {
-               return NotFound();
-        }
+        var obj = _db.Categories.Find(id);
+        if (obj == null) return NotFound();
         _db.Categories.Remove(obj);
         _db.SaveChanges();
         TempData["success"] = "Category deleted successfully";

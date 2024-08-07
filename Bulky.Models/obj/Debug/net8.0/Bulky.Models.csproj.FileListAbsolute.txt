@@ -1,0 +1,12 @@
+/home/iolatunbosun/Documents/tutorial/Bulky/Bulky.Models/bin/Debug/net8.0/Bulky.Models.deps.json
+/home/iolatunbosun/Documents/tutorial/Bulky/Bulky.Models/bin/Debug/net8.0/Bulky.Models.dll
+/home/iolatunbosun/Documents/tutorial/Bulky/Bulky.Models/bin/Debug/net8.0/Bulky.Models.pdb
+/home/iolatunbosun/Documents/tutorial/Bulky/Bulky.Models/obj/Debug/net8.0/Bulky.Models.GeneratedMSBuildEditorConfig.editorconfig
+/home/iolatunbosun/Documents/tutorial/Bulky/Bulky.Models/obj/Debug/net8.0/Bulky.Models.AssemblyInfoInputs.cache
+/home/iolatunbosun/Documents/tutorial/Bulky/Bulky.Models/obj/Debug/net8.0/Bulky.Models.AssemblyInfo.cs
+/home/iolatunbosun/Documents/tutorial/Bulky/Bulky.Models/obj/Debug/net8.0/Bulky.Models.csproj.CoreCompileInputs.cache
+/home/iolatunbosun/Documents/tutorial/Bulky/Bulky.Models/obj/Debug/net8.0/Bulky.Models.sourcelink.json
+/home/iolatunbosun/Documents/tutorial/Bulky/Bulky.Models/obj/Debug/net8.0/Bulky.Models.dll
+/home/iolatunbosun/Documents/tutorial/Bulky/Bulky.Models/obj/Debug/net8.0/refint/Bulky.Models.dll
+/home/iolatunbosun/Documents/tutorial/Bulky/Bulky.Models/obj/Debug/net8.0/Bulky.Models.pdb
+/home/iolatunbosun/Documents/tutorial/Bulky/Bulky.Models/obj/Debug/net8.0/ref/Bulky.Models.dll
